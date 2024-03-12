@@ -1,3 +1,5 @@
+@import "../../responsive.scss";
+
 .homePage {
   display: flex;
   height: 100%;
@@ -6,31 +8,45 @@
     flex: 3;
     padding: 100px;
 
-
     .wrapper {
-        padding-right: 100px;
+      padding-right: 100px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 50px;
+      // background-color: beige;
+      height: 100%;
+
+      @include md {
+        padding: 0px;
+      }
+      @include sm {
+        justify-content: start;
+      }
+      .title {
+        font-size: 64 px;
+        @include lg {
+          font-size: 48px;
+        }
+      }
+      .boxes {
         display: flex;
-        flex-direction:column ;
-        justify-content: center;
-        gap: 50px;
-        // background-color: beige;
-        height: 100%;
+        justify-content: space-between;
 
-        .title {
-            font-size: 64 px;
-
+        @include sm {
+          display: none;
         }
-        .boxes{
-            display: flex;
-            justify-content: space-between;
+      }
+      h1 {
+        font-size: 36px;
+        @include lg {
+          font-size: 32px;
         }
-        h1{
-            font-size: 36px;
-        }
-        h2{
-            font-size: 20px;
-            font-weight: 300;
-        }
+      }
+      h2 {
+        font-size: 20px;
+        font-weight: 300;
+      }
     }
   }
 
@@ -43,10 +59,18 @@
     align-items: center;
     // justify-content: center;
 
+    @include md {
+      display: none;
+    }
+
     img {
       width: 115%;
       position: absolute;
       right: 0;
+
+      @include lg {
+        width: 105%;
+      }
     }
   }
 }
