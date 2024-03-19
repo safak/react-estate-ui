@@ -1,0 +1,24 @@
+.homePage {
+  display: flex;
+  height: 100%;
+}
+.homePage .textContainer {
+  flex: 3;
+  padding: 100px;
+}
+.homePage .textContainer .wrapper {
+  padding-right: 100px;
+}
+.homePage .imgContainer {
+  flex: 2;
+  display: flex;
+  background-color: white;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.homePage .imgContainer img {
+  width: 115%;
+  position: absolute;
+  right: 0;
+}/*# sourceMappingURL=homePage.css.map */

@@ -1,0 +1,100 @@
+nav {
+  display: flex;
+  justify-content: space-between;
+  height: 100px;
+  align-items: center;
+}
+nav a {
+  transition: all 0.4s ease;
+}
+@media (max-width: 738px) {
+  nav a {
+    display: none;
+  }
+}
+nav a:hover {
+  scale: 1.08;
+}
+nav .left {
+  flex: 3;
+  align-items: center;
+  display: flex;
+  gap: 50px;
+}
+nav .left .logo {
+  font-weight: bold;
+  font-size: 20px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+nav .left .logo img {
+  width: 28px;
+}
+@media (max-width: 1024px) {
+  nav .left .logo span {
+    display: none;
+  }
+}
+@media (max-width: 738px) {
+  nav .left .logo span {
+    display: initial;
+  }
+}
+nav .right {
+  flex: 2;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  gap: 5px;
+  height: 100%;
+}
+@media (max-width: 1024px) {
+  nav .right {
+    background-color: transparent;
+  }
+}
+nav .right a {
+  padding: 12px 24px;
+  margin: 29px;
+}
+nav .right .register {
+  background-color: rgb(244, 244, 112);
+}
+nav .right .menuIcon {
+  display: none;
+  z-index: 999;
+}
+nav .right .menuIcon img {
+  width: 36px;
+  height: 36px;
+  cursor: pointer;
+}
+@media (max-width: 738px) {
+  nav .right .menuIcon {
+    display: inline;
+  }
+}
+nav .right .menu {
+  position: absolute;
+  top: 0;
+  right: -50%;
+  background-color: white;
+  color: black;
+  height: 100vh;
+  width: -50%;
+  transition: all 1s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+}
+nav .right .menu.active {
+  right: 0;
+}
+@media (max-width: 738px) {
+  nav .right .menu a {
+    display: initial;
+  }
+}/*# sourceMappingURL=navbar.css.map */
