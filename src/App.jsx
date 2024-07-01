@@ -1,6 +1,8 @@
+import "./layout.scss"
+
 function App() {
   return (
-    <div>Hello World</div>
+    <div className="layout">Hello World</div>
   )
 }
 
