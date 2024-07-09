@@ -1,0 +1,87 @@
+@import '../../reponive.scss';
+
+
+.SeachBar{
+    .type{
+        @include sm{
+            margin-bottom: 5px;
+        }
+       button{
+        padding: 16px 36px;
+        border: 1px solid gray;
+        background-color: white;
+        cursor: pointer;
+        text-transform: capitalize;
+        border-bottom: none;
+        &.active{
+            background: #000;
+            color: white;
+        }
+        &:first-child{
+            border-top-left-radius: 5px;
+            border-right: none;
+
+            @include sm{
+                border-bottom: 1px solid gray;
+            }
+        }
+        &:last-child{
+            border-top-right-radius: 5px;
+            border-left: none;
+        }
+       }
+    }
+    form{
+        border: 1px solid gray;
+        display: flex;
+        justify-content: space-between;
+        height: 64px;
+        gap: 5px;
+
+        @include sm{
+            flex-direction: column;
+            border: none;
+        }
+
+        input{
+            border: none;
+            padding: 0 10px;
+            width: 200px;
+            @include lg{
+                padding: 0px 5px;
+                
+                &:nth-child(2),&:nth-child(3){
+                    width: 140px;
+                }
+            }
+            @include md{ 
+                width: 200px;
+                &:nth-child(2),&:nth-child(3){
+                    width:200px;
+                }
+            }
+            @include sm{
+                width: auto;
+                &:nth-child(2),&:nth-child(3){
+                    width:auto;
+                }
+                padding: 20px;
+                border: 1px solid gray;
+            }
+        }
+        button{
+            border: none;
+            cursor: pointer;
+            background-color: #fece51;
+            flex: 2;
+            @include sm{
+                padding: 10px;
+            }
+        }
+        img{
+            width: 34px;
+            height: 34px;
+            object-fit: cover;
+        }
+    }
+}
