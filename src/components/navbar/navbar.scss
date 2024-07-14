@@ -1,3 +1,5 @@
+@import "../../responsive.scss";
+
 nav {
     height: 100px;
     display: flex;
@@ -6,6 +8,10 @@ nav {
 
     a {
         transition: all 0.4s ease;
+
+        @include sm{
+            display: none;
+        }
 
         &:hover {
             scale: 1.05;
@@ -28,6 +34,18 @@ nav {
             img {
                 width: 28px;
             }
+
+            span{
+                @include md{
+                    display: none;
+                }
+
+                @include sm{
+                    display: initial;
+                }
+            }
+
+
         }
     }
 
@@ -46,6 +64,14 @@ nav {
 
         .register {
             background-color: #fece51;
+        }
+
+        .menuIcon{
+            display: none;
+
+            @include sm {
+                display: inline;
+            }
         }
     }
 }
