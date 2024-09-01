@@ -1,0 +1,54 @@
+.listPage {
+  display: flex;
+  height: 100%;
+
+  .listContainer {
+    flex: 3;
+    height: 100%;
+
+    .wrapper {
+      height: 100%;
+      padding-right: 50px;
+      display: flex;
+      flex-direction: column;
+      gap: 50px;
+      padding-bottom: 50px;
+      overflow-y: scroll;
+      //scrollbar-width: none; /* Ẩn thanh cuộn trên Firefox */
+      box-sizing: content-box; /* Đảm bảo padding không ảnh hưởng đến kích thước tổng thể */
+      position: relative;
+    }
+    .wrapper::-webkit-scrollbar {
+      width: 12px;
+      background: transparent; /* Làm thanh cuộn trong suốt */
+    }
+
+    .wrapper::-webkit-scrollbar-thumb {
+      background-color: rgba(
+        0,
+        0,
+        0,
+        0.2
+      ); /* Làm thanh trượt trong suốt ban đầu */
+      border-radius: 6px; /* Bo góc cho thanh trượt */
+      transition: background-color 0.3s ease; /* Hiệu ứng chuyển đổi màu sắc */
+      position: absolute;
+      top: 0; /* Đặt thanh cuộn lên trên cùng */
+    }
+
+    .wrapper:hover::-webkit-scrollbar-thumb {
+      background-color: rgba(
+        0,
+        0,
+        0,
+        0.6
+      ); /* Hiện thanh trượt rõ hơn khi cuộn */
+    }
+  }
+
+  .mapContainer {
+    flex: 2;
+    height: 100%;
+    background-color: #fcf5f3;
+  }
+}

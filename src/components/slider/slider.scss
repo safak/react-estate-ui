@@ -1,0 +1,87 @@
+@import "../../responsive.scss";
+
+.slider {
+  width: 100%;
+  display: flex;
+  height: 350px;
+  gap: 20px;
+
+  .fullSlider {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    height: 100%;
+    left: 0;
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 9999;
+
+    .arrow {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      img {
+        width: 50px;
+
+        @include md {
+          width: 30px;
+        }
+
+        @include sm {
+          width: 20px;
+        }
+
+        &.right {
+          transform: rotate(180deg);
+        }
+      }
+    }
+
+    .imgContainer {
+      flex: 10;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    .close {
+      position: absolute;
+      top: 0;
+      right: 0;
+      font-size: 36;
+      font-weight: bold;
+      color: white;
+      padding: 50px;
+      cursor: pointer;
+    }
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+
+  .bigImg {
+    flex: 3;
+  }
+
+  .smallImgs {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
+    height: 100px;
+  }
+}
