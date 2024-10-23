@@ -1,0 +1,176 @@
+@import "../../responsive.scss";
+nav {
+  display: flex;
+  justify-content: space-between;
+  height: 80px;
+  background: #a6cbf8;
+  align-items: center;
+  padding: 10px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  border-radius: 10px;
+
+  .left {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    flex: 3;
+
+    @include sm {
+      flex: 1;
+    }
+
+    .logo {
+      font-weight: bold;
+      font-size: 20px;
+      display: flex;
+      gap: 10px;
+      align-items: center;
+
+      img {
+        width: 28px;
+      }
+
+      span {
+        @include md {
+          display: none;
+        }
+        @include sm {
+          display: initial;
+        }
+      }
+    }
+
+    a {
+      transition: all 0.4s ease;
+      @include sm {
+        display: none;
+      }
+
+      &:hover {
+        scale: 1.05;
+      }
+    }
+  }
+
+  .right {
+    flex: 2;
+    position: relative;
+    display: flex;
+    width: 100vw;
+    overflow-x: hidden;
+
+    align-items: center;
+    justify-content: flex-end;
+    height: 100%;
+
+    .user {
+      display: flex;
+      align-items: center;
+      font-weight: bold;
+      img {
+        width: 40px;
+        height: 40px;
+        object-fit: cover;
+        margin-right: 20px;
+        border-radius: 50%;
+      }
+      span {
+        @include sm {
+          display: none;
+        }
+      }
+      .profile {
+        padding: 12px 24px;
+        background-color: #fff;
+        cursor: pointer;
+        border: none;
+        position: relative;
+        @include sm {
+          display: none;
+        }
+
+        .notify {
+          position: absolute;
+          color: white;
+          border-radius: 50%;
+          width: 24px;
+          background-color: #ff385c;
+          height: 24px;
+          display: flex;
+          justify-content: center;
+          top: -8px;
+          right: -8px;
+        }
+      }
+    }
+
+    .aa {
+      @include sm {
+        display: none;
+      }
+    }
+
+    .register {
+      background-color: #fff;
+      @include sm {
+        display: none;
+      }
+    }
+
+    a {
+      padding: 12px 24px;
+      margin: 20px;
+      border-radius: 5px;
+      transition: all 0.4s ease;
+
+      &:hover {
+        scale: 1.05;
+      }
+    }
+
+    .menuIcon {
+      display: none;
+      z-index: 99;
+
+      img {
+        width: 40px;
+        height: 40px;
+        cursor: pointer;
+      }
+
+      @include sm {
+        display: inline;
+      }
+    }
+
+    .menu {
+      position: absolute;
+      top: 0;
+      right: -400%; /* Slide out of view */
+      background-color: black;
+      color: white;
+      height: 100vh;
+      width: 80vw; /* Adjusted width */
+      max-width: 400px; /* Optional max width */
+      z-index: 10;
+      transition: right 0.6s ease;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      font-size: 22px;
+    }
+
+    .active {
+      right: 0; /* Slide into view */
+    }
+
+    @include sm {
+      a {
+        display: inline;
+      }
+    }
+  }
+}

@@ -1,0 +1,94 @@
+@import "../../responsive.scss";
+
+.slider {
+  display: flex;
+  width: 100%;
+  height: 315px;
+  gap: 20px;
+
+  .fullSlider {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.785);
+    display: flex;
+    align-items: center; /* Center arrows vertically */
+    justify-content: space-between; /* Space arrows horizontally */
+    z-index: 9999;
+
+    .arrow {
+      flex: 1;
+      display: flex; /* Ensures flex behavior for alignment */
+      justify-content: center; /* Center arrow in its flex space */
+      align-items: center;
+
+      img {
+        width: 50px;
+        cursor: pointer;
+
+        @include md {
+          width: 30px;
+        }
+        @include sm {
+          width: 20px;
+        }
+        &.right {
+          transform: rotate(180deg);
+        }
+      }
+    }
+
+    .imgContainer {
+      flex: 10;
+      display: flex; /* Allows image container to expand */
+      justify-content: center;
+      align-items: center;
+
+      img {
+        width: 70%;
+        height: 70%;
+        object-fit: cover;
+
+        @include sm {
+          width: 100%;
+        }
+      }
+    }
+    .close {
+      position: absolute;
+      top: 0;
+      right: 0;
+      color: white;
+      font-size: 36px;
+      padding: 50px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+}
+
+.bigImage {
+  flex: 3;
+}
+
+.smallImage {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  img {
+    height: 100px;
+  }
+}
