@@ -1,0 +1,49 @@
+@import "../../responsive.scss";
+.listpage {
+  display: flex;
+  height: 100%;
+  box-sizing: border-box;
+
+  .cardContainer {
+    display: grid;
+    grid-template-columns: repeat(
+      auto-fill,
+      minmax(300px, 1fr)
+    ); // Responsive grid
+    gap: 20px; // Space between cards
+  }
+
+  .listContainer {
+    flex: 2;
+  }
+  .wrapper {
+    padding-right: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    // height: 100%;
+    // overflow-y: scroll;
+    padding-bottom: 50px;
+  }
+  .wrapper::-webkit-scrollbar {
+    width: 5px; /* Adjust this to make the scrollbar thinner */
+  }
+
+  // .wrapper::-webkit-scrollbar-thumb {
+  //   background-color: #888; /* Color of the scrollbar thumb */
+  //   border-radius: 10px; /* Rounded corners (optional) */
+  // }
+
+  .wrapper::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Background of the scrollbar track */
+  }
+  .mapContainer {
+    background-color: #fcf3f5;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 50px;
+  }
+}

@@ -1,0 +1,71 @@
+@import "../../responsive.scss";
+.homee {
+  display: flex;
+  justify-content: center;
+  height: 65vh;
+  border-radius: 12px;
+  margin: 50px 0px;
+  align-items: center;
+  gap: 25px;
+  flex-direction: column;
+  background-image: url("../../../public/bgg.jpg");
+  background-position: center;
+  background-size: cover;
+  object-fit: cover;
+
+  @include md {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  @include sm {
+    height: 50vh;
+  }
+
+  background-repeat: no-repeat;
+  .main {
+    display: flex;
+    padding-top: 40px;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+
+    h1 {
+      color: white;
+      font-size: 50px;
+      font-weight: 700;
+
+      @include md {
+        font-size: 35px;
+      }
+      @include sm {
+        font-size: 25px;
+      }
+    }
+    p {
+      font-size: 23px;
+      font-weight: 300;
+      color: whitesmoke;
+    }
+    .search {
+      button {
+        padding: 10px 20px;
+        background-color: #ff385c; /* Example button color */
+        color: white;
+        bottom: 0px;
+        border: none;
+        z-index: 9999;
+        border-radius: 25px;
+        cursor: pointer;
+        font-size: 1rem;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        transition: background-color 0.3s, transform 0.3s;
+
+        @include sm {
+          font-size: 15px;
+          padding: 8px 15px;
+        }
+      }
+    }
+  }
+}

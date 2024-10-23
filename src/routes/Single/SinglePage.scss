@@ -1,0 +1,201 @@
+@import "../../responsive.scss";
+.singlepage {
+  display: flex;
+  height: 100%;
+
+  @include md {
+    flex-direction: column;
+  }
+
+  .details {
+    flex: 3;
+    height: 100%;
+    // overflow-y: scroll;
+    @include md {
+      flex: none;
+      flex-direction: column;
+      height: max-content;
+      margin-bottom: 50px;
+    }
+
+    .wrapper {
+      padding-right: 50px;
+
+      @include md {
+        padding: 0px;
+      }
+      .info {
+        margin-top: 50px;
+        .top {
+          display: flex;
+          justify-content: space-between;
+          .post {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+
+            h1 {
+              font-weight: 400;
+            }
+            .address {
+              display: flex;
+              gap: 5px;
+              align-items: center;
+              color: #888;
+              font-size: 14px;
+              img {
+                width: 16px;
+                height: 16px;
+              }
+            }
+            .price {
+              padding: 5px;
+              border-radius: 5px;
+              width: max-content;
+              font-size: 20px;
+              font-weight: 300;
+              background-color: #a6cbf887;
+            }
+          }
+          .user {
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 20px;
+            padding: 0px 40px;
+            border-radius: 10px;
+            font-weight: 600;
+            background-color: #a6cbf887;
+            img {
+              width: 50px;
+              height: 50px;
+              border-radius: 50%;
+              object-fit: cover;
+            }
+          }
+        }
+        .bottom {
+          margin-top: 50px;
+          line-height: 20px;
+
+          color: #555;
+        }
+      }
+    }
+  }
+  .features {
+    flex: 2;
+    border-radius: 6px;
+    background-color: whitesmoke;
+    padding: 15px;
+    height: max-content;
+
+    @include md {
+      flex: none;
+      margin-bottom: 50px;
+      height: max-content;
+    }
+
+    .wrapper {
+      padding: 0px 20px;
+      display: flex;
+      gap: 20px;
+      flex-direction: column;
+
+      @include sm {
+        padding: 2px;
+      }
+      img {
+        width: 24px;
+        height: 24px;
+      }
+      .title {
+        font-weight: bold;
+        font-size: 18px;
+        margin-bottom: 10px;
+      }
+      .feature {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        img {
+          background-color: #a6cbf887;
+        }
+        .featureText {
+          span {
+            font-weight: bold;
+            @include sm {
+              font-size: 13px;
+            }
+          }
+
+          p {
+            font-size: 14px;
+
+            @include sm {
+              font-size: 10px;
+            }
+          }
+        }
+      }
+      .listVertical {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px 10px;
+        background-color: white;
+        border-radius: 10px;
+      }
+      .listHorizontal {
+        display: flex;
+        justify-content: space-between;
+
+        padding: 20px 10px;
+        background-color: white;
+        border-radius: 10px;
+      }
+      .sizes {
+        display: flex;
+        justify-content: space-between;
+
+        @include lg {
+          font-size: 12px;
+        }
+
+        .size {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          background-color: white;
+          padding: 10px;
+          border-radius: 6px;
+        }
+      }
+      .mapContainer {
+        width: 100%;
+        height: 200px;
+      }
+      .buttons {
+        display: flex;
+        justify-content: space-between;
+
+        button {
+          padding: 15px;
+          display: flex;
+          align-items: center;
+          gap: 5px;
+          background-color: white;
+          border: 1px solid #26c1cf;
+          border-radius: 5px;
+          cursor: pointer;
+          img {
+            width: 16px;
+            height: 16px;
+          }
+        }
+      }
+    }
+  }
+}

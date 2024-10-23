@@ -1,0 +1,196 @@
+@import "../responsive.scss";
+
+.homepage {
+  display: flex;
+  flex-direction: column;
+  height: 110%;
+  box-sizing: border-box;
+  padding: 10px 25px;
+  border-radius: 15px;
+  background-image: url(../../public/sky-bg.avif);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  .map {
+    border-radius: 0; // Remove border-radius
+    // Add other styles as needed
+  }
+  nav {
+    margin-top: 20px;
+    border-radius: 10px;
+
+    margin-left: 25px;
+    margin-right: 25px;
+    background: transparent;
+    border: 1px solid rgba(0, 0, 0, 0.179);
+  }
+
+  /* In your CSS for Navbar */
+  .navbar {
+    position: relative; /* Ensure it's relative for z-index to work */
+    z-index: 1001; /* Ensure it’s above the map */
+    background-color: rgba(
+      255,
+      255,
+      255,
+      0.9
+    ); /* Slightly transparent background */
+    padding: 10px 20px; /* Add some padding */
+  }
+
+  .open-map-button {
+    padding: 10px 20px;
+    background-color: #ff385c; /* Button color */
+    color: white;
+    position: fixed; /* Make the button sticky */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Adjust for center alignment */
+    bottom: 20px; /* Adjust the vertical position */
+    border: none;
+    z-index: 9999;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s, transform 0.3s;
+    margin: 20px 0;
+
+    /* Hover effect */
+    &:hover {
+      background-color: #ff5a8a;
+      transform: translate(-50%, -2px); /* Adjust hover effect */
+    }
+  }
+
+  // Wrapper for text and image sections
+  .content-wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  // Text section styles
+  .textContainer {
+    flex: 3;
+
+    .wrapper {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 20px;
+      padding-right: 60px;
+      height: 100%;
+
+      @include md {
+        padding: 0;
+      }
+
+      @include sm {
+        justify-content: flex-start;
+      }
+
+      .title {
+        font-size: 40px;
+        font-weight: 800;
+
+        @include lg {
+          font-size: 35px;
+        }
+
+        @include sm {
+          font-size: 30px;
+        }
+
+        span {
+          color: rgb(255, 255, 255);
+        }
+      }
+
+      .boxes {
+        display: flex;
+        justify-content: flex-start;
+        gap: 50px;
+        @include sm {
+          display: none;
+        }
+
+        h1 {
+          font-size: 30px;
+          font-weight: 700;
+        }
+
+        h2 {
+          font-size: 15px;
+          font-weight: 400;
+          color: rgba(0, 0, 0, 0.777);
+        }
+      }
+    }
+  }
+
+  // Image section styles
+  .imageContainer {
+    flex: 2;
+    position: relative;
+
+    @include md {
+      display: none;
+    }
+
+    img {
+      width: 100%;
+      position: absolute;
+      bottom: -10;
+      right: 0;
+
+      @include lg {
+        width: 100%;
+      }
+      @include sm {
+        display: none;
+      }
+    }
+  }
+
+  // Cards section styles
+  .cardSection {
+    margin-top: 50px;
+
+    @include md {
+      margin-top: 210px;
+    }
+
+    @include sm {
+      margin-top: 210px;
+    }
+
+    .cardSectionTitle {
+      position: relative;
+      font-size: 28px;
+      padding-left: 10px;
+      font-weight: 700;
+      width: fit-content;
+      margin-bottom: 20px;
+
+      p {
+        font-size: 14px;
+        padding-left: 5px;
+        font-weight: 400;
+        background: rgb(239, 237, 237);
+        width: fit-content;
+        padding: 5px;
+        border-radius: 5px;
+      }
+      img {
+        width: 18px;
+        position: absolute;
+        height: 18px;
+        right: 170px;
+        bottom: 5px;
+      }
+      span {
+        color: #ff385c;
+      }
+    }
+  }
+}
