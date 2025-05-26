@@ -10,6 +10,7 @@ import {
 } from "react-router-dom";
 import Layout from "./routes/layout/layout";
 import SinglePage from "./routes/singlePage/singlePage";
+import SinglePage from "./routes/singlePage/singlePage";
 // import SinglePage from "./routes/singlePage/singlePage";
 
 
