@@ -1,0 +1,90 @@
+.singlePage {
+    display: flex;
+    height: 100%;
+
+    .details {
+        flex: 3;
+
+        .wrapper {
+            padding-right: 50px;
+
+            .info {
+                .top {
+                    display: flex;
+                    justify-content: space-between;
+
+                    .post {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 20px;
+                        h1 {
+                            font-weight:400;
+
+                        }
+
+                        .address {
+                            display: flex;
+                            align-items: center;
+                            gap: 5px;  
+                            align-items: center;
+                            color: #888;
+                            font-size: 14px;
+
+                            img{
+                                width: 16px;
+                                height: 16px;
+                            }
+                        }
+                        .price {
+                            padding: 5px;
+                            background-color: rgba(254, 205, 81, 0.438);
+                            border-radius: 5px;
+                            width: max-content;
+                            font-size: 20px;
+                            font-weight: 300;
+                        }
+                    }
+
+                    .user {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                        gap: 20px;
+                        padding: 0px 30px;
+                        // you can comment width and height later
+                        // width: 150px;
+                        // height: 150px;
+                        border-radius: 10px;
+                        background-color:  rgba(254, 205, 81, 0.438);
+                        font-weight: 600;
+
+                        img {
+                            width: 50px;
+                            height: 50px;
+                            object-fit: cover;
+                            border-radius: 50%;
+                        }
+                    }
+                }
+
+                .bottom {
+                    // to give some place from top
+                    margin-top: 50px;
+                    color: #555;
+                    //to give a space between line
+                    line-height: 20px;
+                }
+            }
+        }
+    }
+
+    .features {
+        flex: 2;
+        background-color: #fcf5f3;
+
+        .wrapper {
+            padding: 0px 20px;
+        }
+    }
+}

@@ -1,0 +1,29 @@
+.slider{
+    width: 100%;
+    height: 350px;
+    display: flex;
+    gap: 20px;
+
+    img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 10px;
+        cursor: 10px;
+    }
+
+    .bigImage{
+        flex: 3;
+    }
+
+    .smallImages{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 20px;
+        flex: 1;
+        img{
+            height:100px;
+        }
+    }
+}
